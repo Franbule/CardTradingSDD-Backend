@@ -90,3 +90,13 @@ app:
 server:
   port: ${PORT:8080} # Railway inyecta la variable PORT
   shutdown: graceful # Para no cortar conexiones al desplegar una nueva versión
+
+# Reduce log verbosity to stay under Railway's 500 logs/sec rate limit
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    org.springframework.boot: INFO
+    org.apache.kafka: WARN
+    org.hibernate: WARN
+    com.cardtrading: INFO

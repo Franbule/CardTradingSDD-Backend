@@ -90,3 +90,12 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    org.springframework.boot: INFO
+    org.apache.kafka: WARN
+    org.hibernate: WARN
+    com.cardtrading: INFO
